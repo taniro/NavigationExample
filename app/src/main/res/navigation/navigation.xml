@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/tituloFragment">
+
+    <fragment
+        android:id="@+id/tituloFragment"
+        android:name="tads.eaj.ufrn.navigationexample.TituloFragment"
+        android:label="TituloFragment"
+        tools:layout="@layout/fragment_titulo"
+        >
+        <action
+            android:id="@+id/action_tituloFragment_to_perguntaFragment"
+            app:destination="@id/perguntaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/perguntaFragment"
+        android:name="tads.eaj.ufrn.navigationexample.PerguntaFragment"
+        android:label="PerguntaFragment"
+        tools:layout="@layout/fragment_pergunta">
+        <action
+            android:id="@+id/action_perguntaFragment_to_acertouFragment"
+            app:destination="@id/acertouFragment"
+            app:popUpTo="@id/perguntaFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_perguntaFragment_to_errouFragment"
+            app:destination="@id/errouFragment"
+            app:popUpTo="@id/perguntaFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/acertouFragment"
+        android:name="tads.eaj.ufrn.navigationexample.AcertouFragment"
+        android:label="AcertouFragment"
+        tools:layout="@layout/fragment_acertou">
+        <action
+            android:id="@+id/action_acertouFragment_to_perguntaFragment"
+            app:destination="@id/perguntaFragment"
+            app:popUpTo="@id/tituloFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/errouFragment"
+        android:name="tads.eaj.ufrn.navigationexample.ErrouFragment"
+        android:label="fragment_errou"
+        tools:layout="@layout/fragment_errou" >
+        <action
+            android:id="@+id/action_errouFragment_to_perguntaFragment"
+            app:destination="@id/perguntaFragment"
+            app:popUpTo="@id/tituloFragment" />
+    </fragment>
+</navigation>

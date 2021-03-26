@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PerguntaFragment">
+
+        <RadioGroup
+            android:id="@+id/radioGroupQuestao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <RadioButton
+                android:id="@+id/rbJava"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/java" />
+
+            <RadioButton
+                android:id="@+id/rbC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/c" />
+
+            <RadioButton
+                android:id="@+id/rbKotlin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kotlin" />
+
+            <RadioButton
+                android:id="@+id/rbJavaScript"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/javascript" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/qual_linguagem_de_programa_o_estamos_usando_neste_curso"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bResponder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/responder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupQuestao" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

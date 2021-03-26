@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NavigationExample</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="java">Java</string>
+    <string name="c">C</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="javascript">JavaScript</string>
+    <string name="qual_linguagem_de_programa_o_estamos_usando_neste_curso">Qual linguagem de programação estamos usando neste curso?</string>
+    <string name="aplicativo_question_rio">Aplicativo Questionário</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="acertou">Acertou!</string>
+    <string name="voltar">Voltar</string>
+    <string name="responder">Responder</string>
+    <string name="errou">Errou!</string>
+    <string name="tentar_novamente">Tentar Novamente</string>
+</resources>
