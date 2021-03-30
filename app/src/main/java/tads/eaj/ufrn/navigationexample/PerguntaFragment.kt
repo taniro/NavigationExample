@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.navArgs
 import tads.eaj.ufrn.navigationexample.databinding.FragmentPerguntaBinding
 
 
@@ -25,8 +27,15 @@ class PerguntaFragment : Fragment() {
             }else{
                 Navigation.findNavController(it).navigate(R.id.action_perguntaFragment_to_errouFragment)
             }
-
         }
+
+        //val args = PerguntaFragmentArgs.fromBundle(arguments!!)
+
+        val args:PerguntaFragmentArgs by navArgs()
+
+        Toast.makeText(context, "${args.mensagem} o id: ${args.id}", Toast.LENGTH_SHORT).show()
+
+        //val args:PerguntaFragmentArgs by navArgs()
 
         return binding.root
     }

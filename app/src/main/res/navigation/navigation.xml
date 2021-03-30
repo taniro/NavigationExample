@@ -8,9 +8,8 @@
     <fragment
         android:id="@+id/tituloFragment"
         android:name="tads.eaj.ufrn.navigationexample.TituloFragment"
-        android:label="TituloFragment"
-        tools:layout="@layout/fragment_titulo"
-        >
+        android:label="Início"
+        tools:layout="@layout/fragment_titulo">
         <action
             android:id="@+id/action_tituloFragment_to_perguntaFragment"
             app:destination="@id/perguntaFragment" />
@@ -18,7 +17,7 @@
     <fragment
         android:id="@+id/perguntaFragment"
         android:name="tads.eaj.ufrn.navigationexample.PerguntaFragment"
-        android:label="PerguntaFragment"
+        android:label="Quiz"
         tools:layout="@layout/fragment_pergunta">
         <action
             android:id="@+id/action_perguntaFragment_to_acertouFragment"
@@ -30,11 +29,17 @@
             app:destination="@id/errouFragment"
             app:popUpTo="@id/perguntaFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="mensagem"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="long" />
     </fragment>
     <fragment
         android:id="@+id/acertouFragment"
         android:name="tads.eaj.ufrn.navigationexample.AcertouFragment"
-        android:label="AcertouFragment"
+        android:label="Resultado"
         tools:layout="@layout/fragment_acertou">
         <action
             android:id="@+id/action_acertouFragment_to_perguntaFragment"
@@ -44,11 +49,16 @@
     <fragment
         android:id="@+id/errouFragment"
         android:name="tads.eaj.ufrn.navigationexample.ErrouFragment"
-        android:label="fragment_errou"
-        tools:layout="@layout/fragment_errou" >
+        android:label="Resultado"
+        tools:layout="@layout/fragment_errou">
         <action
             android:id="@+id/action_errouFragment_to_perguntaFragment"
             app:destination="@id/perguntaFragment"
             app:popUpTo="@id/tituloFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/sobreFragment"
+        android:name="tads.eaj.ufrn.navigationexample.SobreFragment"
+        android:label="Sobre o aplicativo"
+        tools:layout="@layout/fragment_sobre" />
 </navigation>
