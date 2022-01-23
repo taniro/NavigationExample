@@ -44,7 +44,8 @@
         <action
             android:id="@+id/action_acertouFragment_to_perguntaFragment"
             app:destination="@id/perguntaFragment"
-            app:popUpTo="@id/tituloFragment" />
+            app:popUpTo="@id/tituloFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/errouFragment"
